@@ -41,17 +41,48 @@ startActivity(intent);
 ```
 
 
-_Fragmentet_ skapades
-
-
-
-
-
-
-
+_Fragmentet_ skapades genom filen BlankFragment.java och _fragmentet_ lades till i activity_main.xml där även en _LinearLayout_ adderades.
 ```
-f
+<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+
+        <fragment
+            android:name="com.example.screens.BlankFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:tag="blank_fragment"
+            />
 ```
 
 
-![](android.png)
+_ImageView_ lades till i filen activity_main.xml eftersom den skulle ligga på _screen_ nummer två. Slutligen gjordes en justering av _layouten_. Texten i _fragment_ ändrades också i filen strings.xml.
+```
+<ImageView
+            android:id="@+id/id_night_sky"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:contentDescription="Night sky"
+            app:srcCompat="@drawable/star_sky" />
+```
+```
+<string name="hello_blank_fragment">This is the blank fragment saying that this image is from Mammoth Hot Springs.</string>
+```
+
+
+_Screen_ nummer ett såg tillslut ut på följande vis.
+![](assignment4-screen1.png)
+_Screen_ nummer två såg tillslut ut på följande vis.
+![](assignment4-screen2.png)
